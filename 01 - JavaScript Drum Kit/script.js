@@ -17,6 +17,8 @@ function playSound(pressedKey) {
   audios.forEach(audio => {
     if (audio.dataset.key == pressedKey) {
       console.log(audio.dataset.key);
+      audio.currentTime = 0; //Bu statement butona her bastığımda audio'nun baştan
+                            // çalmasını sağlıyor.
       audio.play();
     }
   })
